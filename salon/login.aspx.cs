@@ -27,7 +27,15 @@ namespace salon
                 Session["username"] = TextBox1.Text;
                 Response.Redirect("home.aspx");
             }
-        }  
-    
+            else 
+            {
+                Response.Redirect("login.aspx");
+            }
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("register.aspx");
+        }
     }
 }

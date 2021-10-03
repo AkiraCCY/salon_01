@@ -17,7 +17,7 @@
         </div>
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" style="height: 29px" Text="login" />
 &nbsp;
-        <asp:Button ID="Button2" runat="server" Text="register" />
+        <asp:Button ID="Button2" runat="server" Text="register" OnClick="Button2_Click" />
     </form>
 </body>
 </html>
