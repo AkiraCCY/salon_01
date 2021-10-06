@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,7 +13,23 @@ namespace salon
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
 
+
+                using (SqlConnection con = new SqlConnection("Data source=Kasira-FEW;Initial Catalog=salon;Integrated Security=True;"))
+                {
+                    SqlCommand cmd = new SqlCommand("shop", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    con.Open();
+                    DataList1.DataSource = cmd.ExecuteReader();
+                    DataList1.DataBind();
+
+                }
+
+            }
         }
+
+
     }
 }

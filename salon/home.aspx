@@ -1,14 +1,50 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="home.aspx.cs" Inherits="salon.home" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     
-    <!Doctype html>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    <!Doctype html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <html>
+<head>
+    <title></title>
+   
 
-    <p>
-        <br />
-        <asp:Button type="button" class="btn btn-primary" ID="Button1" runat="server" Text="Button" />
-    &nbsp;</p>
+    <style>  
+        .productList {  
+            border: 1px solid #6c757d;  
+            margin-bottom: 10px;  
+            padding: 15px;  
+            border-radius: 3px;  
+        }  
+    </style>  
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="container py-4">  
+            <h5 class="text-center text-uppercase">DataList control in asp.net</h5>  
+            <asp:DataList ID="DataList1" runat="server" CssClass="row" DataKeyField="List_id" DataSourceID="SqlDataSource1" Width="204px" OnSelectedIndexChanged="DataList1_SelectedIndexChanged">  
+                <ItemTemplate>  
+                   <div class="col-4">  
+                           
+                        </div>
+                    <asp:ImageButton ID="ImageButton1" runat="server" alt="" width="250" src='<%# Eval("List_img") %>' />
+                
+                  <br />
+                   
+                    <asp:Label ID="List_nameLabel" runat="server" Text='<%# Eval("List_name") %>' />
+                    <br />
+                   
+                    <asp:Label ID="List_priceLabel" runat="server" Text='<%# Eval("List_price") %>' />
+                    <br />
+                  
+                    <asp:Label ID="List_timeLabel" runat="server" Text='<%# Eval("List_time") %>' />
+                    <br />
+                    
+                    <br />
+                </ItemTemplate>  
+            </asp:DataList>  
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:salonConnectionString %>" SelectCommand="SELECT * FROM [shop]"></asp:SqlDataSource>
+        </div>  
+    </form>
+</body>
+</html>
 </asp:Content>

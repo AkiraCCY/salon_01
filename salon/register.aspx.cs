@@ -33,9 +33,7 @@ namespace salon
             cmd.ExecuteNonQuery();
              con.Close();
 
-            Label1.Visible = true;
-            Label1.Text = "New Customer Added Successfully";
-
+            Response.Redirect("login.aspx");
            
 
         }
