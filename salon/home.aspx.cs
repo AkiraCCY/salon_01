@@ -19,7 +19,7 @@ namespace salon
 
                 using (SqlConnection con = new SqlConnection("Data source=Kasira-FEW;Initial Catalog=salon;Integrated Security=True;"))
                 {
-                    SqlCommand cmd = new SqlCommand("shop", con);
+                    SqlCommand cmd = new SqlCommand("spGetProductList", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     con.Open();
                     DataList1.DataSource = cmd.ExecuteReader();
