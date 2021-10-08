@@ -14,7 +14,8 @@ namespace salon
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+      
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
             Response.Redirect("login.aspx");
         }

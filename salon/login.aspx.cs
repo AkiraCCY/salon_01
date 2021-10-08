@@ -16,8 +16,11 @@ namespace salon
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+       
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
+
             SqlConnection con = new SqlConnection(@"Data source=Kasira-FEW;Initial Catalog=salon;Integrated Security=True; ");
             SqlDataAdapter sda = new SqlDataAdapter("Select * from tbl_member where username_id='" + TextBox1.Text + "'and password='" + TextBox2.Text + "' ", con);
             DataTable dt = new DataTable();
@@ -27,15 +30,20 @@ namespace salon
                 Session["username"] = TextBox1.Text;
                 Response.Redirect("home.aspx");
             }
-            else 
+            else
             {
                 Response.Redirect("login.aspx");
             }
         }
 
-        protected void Button2_Click(object sender, EventArgs e)
+        protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
         {
             Response.Redirect("register.aspx");
+        }
+
+        protected void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -15,29 +15,27 @@ namespace salon
 
         }
 
-        protected void Button2_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("login.aspx");
-        }
+       
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data source=Kasira-FEW;Initial Catalog=salon;Integrated Security=True; ");
             con.Open();
-            SqlCommand cmd = new SqlCommand("Insert into tbl_member" + "(username_id,password,member_name,member_address,member_telophon) values (@username_id,@password,@member_name,@member_address,@member_telophon)",con );
+            SqlCommand cmd = new SqlCommand("Insert into tbl_member" + "(username_id,password,member_name,member_address,member_telophon) values (@username_id,@password,@member_name,@member_address,@member_telophon)", con);
             cmd.Parameters.AddWithValue("@username_id", TextBox1.Text);
             cmd.Parameters.AddWithValue("@password", TextBox2.Text);
             cmd.Parameters.AddWithValue("@member_name", TextBox3.Text);
             cmd.Parameters.AddWithValue("@member_address", TextBox4.Text);
             cmd.Parameters.AddWithValue("@member_telophon", TextBox5.Text);
             cmd.ExecuteNonQuery();
-             con.Close();
+            con.Close();
 
             Response.Redirect("login.aspx");
-           
-
         }
 
-      
+        protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("login.aspx");
+        }
     }
 }

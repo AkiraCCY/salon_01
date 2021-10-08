@@ -112,6 +112,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="css\body.css" />
     <Content Include="css\bootstrap-grid.css" />
     <Content Include="css\bootstrap-grid.min.css" />
     <Content Include="css\bootstrap-grid.rtl.css" />
@@ -128,6 +129,7 @@
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\bootstrap.rtl.css" />
     <Content Include="css\bootstrap.rtl.min.css" />
+    <Content Include="css\button.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -156,7 +158,15 @@
     <Content Include="css\bootstrap.min.css.map" />
     <Content Include="css\bootstrap.rtl.css.map" />
     <Content Include="css\bootstrap.rtl.min.css.map" />
-    <Content Include="img\240103761.jpg" />
+    <Content Include="img\240103761.png" />
+    <Content Include="img\logo.jpg" />
+    <Content Include="img\จองคิวทำเล็บ.png" />
+    <Content Include="img\ชำระเงิน.png" />
+    <Content Include="img\ยกเลิก.png" />
+    <Content Include="img\ลายเล็บ.png" />
+    <Content Include="img\สมัครสมาชิก.png" />
+    <Content Include="img\เข้าสู่ระบบ.png" />
+    <Content Include="img\เลือก.png" />
     <Content Include="js\bootstrap.bundle.js.map" />
     <Content Include="js\bootstrap.bundle.min.js.map" />
     <Content Include="js\bootstrap.esm.js.map" />
